@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    background: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+:root{
+    --gray: rgba(119, 119, 119, 0.562);
+    --white: rgba(255, 255, 255, 0.76);
+    --green: rgba(94, 255, 0, 0.76);
+    --blue: rgba(0, 140, 255, 0.76);
+    --red: rgba(255, 0, 0, 0.76);
+}
+
+.ui-panel{
+    position: absolute;
+    left: 1rem;
+    top: 0rem;
+    width: 150px;
+    color: var(--white);
+    border: 1px solid var(--gray);
+}
+.highest{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 250px;
+    color: var(--white);
+    border: 2px solid var(--gray);
+    font-size: 1.2rem;
+}
+.section{
+    padding: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.scores{
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+}
+
+.menu-panel,.game-over-panel,.game-pause-panel{
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    z-index: 10;
+}
+.game-over-panel,.game-pause-panel{
+    display: none;
+}
+.menu-text,.game-over-text,.game-pause-text{
+    text-align: center;
+    font-size: 3rem;
+}
+.game-over-text{
+    text-align: center;
+    font-size: 2rem;
+}
+.neo{
+    color: var(--blue);
+}
+.start-btn,.restart-btn,.resume-btn,.instruction-btn{
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: var(--green);
+    cursor: pointer;
+}
+.instruction-btn{
+    background-color: var(--gray);
+}
+.instruction{
+    position: absolute;
+    background-color: rgb(150, 150, 150);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    z-index: 111;
+}
+.start-btn:hover{
+    background-color: var(--blue);
+}
+.damage{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(236, 22, 22, 0.514);
+    display: none;
+}
+.points-div,.health-inc-div{
+    display: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    z-index: 10;
+    animation: points-popup 1s ease-in-out;
+    animation-iteration-count: 1;
+}
+.points{
+    color: var(--green);
+    font-size: 3rem;
+}
+.health-inc{
+    color: var(--red);
+    font-size: 3rem;
+}
+@keyframes points-popup{
+    0%{
+        top: 33%;
+        opacity: 1;
+    }
+    100%{
+        top: 25%;
+        opacity: 0;
+    }
+}
+

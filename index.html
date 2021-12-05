@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="./dependencies/three.min.js"></script>
+    <!-- <script src="./dependencies/GLTFLoader.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.118.1/examples/js/loaders/GLTFLoader.js"></script> -->
+    <script src="./dependencies/fontThree.js"></script>
+    <script src="./scripts/lerp.js"></script>
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/main.js"></script>
+    
+</head>
+<body>
+    <div class="ui-panel">
+        <div class="section">
+            <h3>NeoStones</h3>
+        </div>
+        <div class="scores">
+            <div class="section">
+                <p>Score: </p>
+                <p class="score"></p>
+            </div>
+            <div class="section">
+                <p>Distance: </p>
+                <p class="distance"></p>
+            </div>
+        </div>
+        <div class="section">
+            <p>Health: </p>
+            <p class="health"></p>
+        </div>
+    </div>
+    <div class="highest">
+        <div class="section">
+            <p>Highest Score: </p>
+            <p class="highest-score"></p>
+        </div>
+        <!-- <div class="section">
+            <p>Highest Distance: </p>
+            <p class="highest-distance"></p>
+        </div> -->
+    </div>
+    <div class="instruction">
+        <h1>Controls:</h1>
+        <p>Press Left & Right arrow keys to move the spaceship</p>
+        <h1>Avoid:</h1>
+        <p>Big white blocks of degree</p>
+        <h1>Collectables:</h1>
+        <p>NeoStones</p>
+        <h1>Health Increase:</h1>
+        <p>Collect heart balls</p>
+    </div>
+
+    <div class="menu-panel">
+        <div class="menu-text">
+            <h1><span class="neo">Neo</span>Stones</h1>
+            <p style="font-size: 1.2rem">Avoid useless degrees. Collect neoStones to increase skills</p>
+            <button class="start-btn" id="start">Start</button>
+        </div>
+    </div>
+    
+    <div class="game-over-panel">
+        <div class="game-over-text">
+            <h1>Game Over!</h1>
+            <div class="section">
+                <p>Score: </p>
+                <p class="game-over-score"></p>
+            </div>
+            <div class="section">
+                <p>Distance: </p>
+                <p class="game-over-distance"></p>
+            </div>
+            <button class="restart-btn">Restart</button>
+        </div>
+    </div>
+    <div class="game-pause-panel">
+        <div class="game-pause-text">
+            <h1>Game Pause</h1>
+            <button class="resume-btn">Resume</button>
+        </div>
+    </div>
+    <div class="damage"></div>
+    <div class="points-div"><h2 class="points"></h2></div>
+    <div class="health-inc-div"><h2 class="health-inc"></h2></div>
+</body>
+</html>
