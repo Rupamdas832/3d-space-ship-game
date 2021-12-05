@@ -59,7 +59,7 @@ body{
 }
 .menu-text,.game-over-text,.game-pause-text{
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 .game-over-text{
     text-align: center;
@@ -80,11 +80,12 @@ body{
 }
 .instruction{
     position: absolute;
-    background-color: rgb(150, 150, 150);
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    width: 300px;
     padding: 1rem;
     z-index: 111;
 }
